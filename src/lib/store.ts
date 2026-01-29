@@ -37,7 +37,7 @@ export const MENU_ITEMS: MenuItem[] = [
         name: 'Margherita Pizza',
         description: 'Classic tomato and mozzarella cheese.',
         price: 12.99,
-        image: 'https://images.unsplash.com/photo-1574071318500-d036d562f03c?w=500&q=80',
+        image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&q=80',
         category: 'Pizza'
     },
     {
