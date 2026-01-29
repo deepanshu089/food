@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+# Crave - Order Management System
+
+A modern, responsive food delivery application built with Next.js 15, Tailwind CSS v4, and Framer Motion.
+
+## Features
+
+- **Menu Display**: Browse a curated list of food items with images and descriptions.
+- **Cart Management**: Add items, adjust quantities, and manage your cart state.
+- **Order Placement**: Simple checkout process to place your order.
+- **Real-time Order Tracking**: Track your order status from "Received" to "Delivered" with simulated real-time updates.
+- **Responsive Design**: Mobile-first design that works beautifully on all devices.
+- **Modern UI/UX**: Smooth animations and transitions using Framer Motion.
+
+## Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Testing**: [Vitest](https://vitest.dev/) & [React Testing Library](https://testing-library.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.17 or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd assignment
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+## Testing
+
+Run the test suite with:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project uses Vitest for unit and integration testing of API routes and components.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **`src/app`**: Next.js App Router pages and API routes.
+- **`src/components`**: Reusable UI components (Navbar, MenuItemCard, etc.).
+- **`src/context`**: React Context for global state management (CartContext).
+- **`src/lib`**: Utility functions and shared types.
+- **`src/lib/store.ts`**: In-memory data store for the assignment (simulating a database).
 
-## Learn More
+## Design Choices
 
-To learn more about Next.js, take a look at the following resources:
+- **In-Memory Store**: For the purpose of this assessment, a simple in-memory array is used to store orders. In a production app, this would be replaced by a database (PostgreSQL/MongoDB).
+- **Tailwind v4**: Utilized the latest alpha/beta of Tailwind for zero-config CSS.
+- **Client-Side Simulation**: Order status updates are simulated using `setTimeout` in the backend and polled by the frontend.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
